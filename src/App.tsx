@@ -141,10 +141,9 @@ function App() {
           <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-gold-300 to-gold-500">
             About Me
           </h2>
-          <div className="max-w-3xl mx-auto text-gray-300">
+          <div className="max-w-4xl mx-auto text-gray-300">
             <p className="mb-4">
-              Full Stack Developer and DevOps Engineer passionate about building scalable applications
-              and automating development workflows. Experienced in modern web technologies and cloud platforms.
+            Driven and dependable individual with a strong passion for software engineering, actively pursuing opportunities to enhance technical skills and industry knowledge. Highly motivated to take on challenges, committed to continuous learning, and focused on delivering quality solutions. Eager to contribute effectively within a team environment, take on responsibilities, and grow into a qualified professional in the dynamic field of software engineering. Seeking a position where I can leverage my skills, dedication, and enthusiasm to add value and gain hands-on experience in the industry.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
               {[
