@@ -24,116 +24,118 @@ function App() {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <ParticleBackground />
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/20 to-black"></div>
-        
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-10 relative z-10"
-  >
-    
-    {/* Text Section */}
-    <div className="text-center md:text-left">
-      
-      <motion.h1
+    <ParticleBackground />
+    <div className="absolute inset-0 bg-gradient-to-br from-black via-black/20 to-black"></div>
+
+    <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gold-300 to-gold-500"
-      >
-        M.N Abdullah
-      </motion.h1>
-      <TypeAnimation
-        sequence={[
-          'Full Stack Developer',
-          2000,
-          'DevOps Enthusiast',
-          2000,
-          'Ui / Ux Designer',
-          2000,
-        ]}
-        wrapper="div"
-        speed={50}
-        className="text-2xl text-gold-400 mb-8"
-        repeat={Infinity}
-      />
-      
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="flex justify-center md:justify-start gap-6 mb-8"
-      >
-        {[
-          { icon: Github, href: "https://github.com/Abdullah0928" },
-          { icon: Linkedin, href: "https://www.linkedin.com/in/m-n-abdullah/" },
-          { icon:  Facebook, href: "https://www.facebook.com/mnabdullah0928/" },
-          { icon:  Instagram, href: "https://www.instagram.com/a_b_de0210/" },
-          { icon: Mail, href: "mailto:mnabdullah0928@gmail.com" },
-        ].map((item, index) => (
-          <motion.a 
-            key={index}
-            href={item.href}
-            whileHover={{ scale: 1.2, rotate: 5 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-gold-400 transition-colors"
-          >
-            <item.icon size={24} />
-          </motion.a>
-        ))}
-        <motion.button
-          onClick={handleLike}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          className="flex items-center gap-2 hover:text-gold-400 transition-colors"
-        >
-          <Heart
-            size={24}
-            className={`transition-colors ${likes > 0 ? 'fill-gold-500 text-gold-500' : ''}`}
-          />
-          <span>{likes}</span>
-        </motion.button>
-      </motion.div>
+        transition={{ duration: 0.8 }}
+        className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-10 relative z-10"
+    >
+        
+        {/* Image Section - Set to show above text on small screens */}
+        <motion.img
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            src={Abd}
+            alt="M.N Abdullah"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-96 md:h-96 rounded-full mb-8 md:mb-0 border-4 border-gold-500 shadow-lg order-1 md:order-2"
+        />
 
-      <div className="flex flex-col md:flex-row gap-4">
-      <div className="flex flex-col md:flex-row gap-4">
-  <motion.a
-    href="/path-to-your-cv.pdf"
-    download
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="bg-gradient-to-r from-gold-600 to-gold-500 text-black font-medium py-2 px-4 rounded transition-colors hover:from-gold-700 hover:to-gold-600 text-center"
-  >
-    Download CV
-  </motion.a>
+        {/* Text Section - Set to show below the image on small screens */}
+        <div className="text-center md:text-left order-2 md:order-1">
+        <motion.h1
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2 }}
+    className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gold-300 to-gold-500"
+>
+    M.N Abdullah
+</motion.h1>
 
-  <motion.a
-    href="https://wa.me/94754999700" // Replace with your WhatsApp number
-    target="_blank" // Opens the link in a new tab
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="bg-gradient-to-r from-gold-600 to-gold-500 text-black font-medium py-2 px-4 rounded transition-colors hover:from-gold-700 hover:to-gold-600 text-center"
-  >
-    Hire Me
-  </motion.a>
+            <TypeAnimation
+                sequence={[
+                    'Full Stack Developer',
+                    2000,
+                    'DevOps Enthusiast',
+                    2000,
+                    'Ui / Ux Designer',
+                    2000,
+                ]}
+                wrapper="div"
+                speed={50}
+                className="text-2xl text-gold-400 mb-8"
+                repeat={Infinity}
+            />
+            
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="flex justify-center md:justify-start gap-6 mb-8"
+            >
+                {[
+                    { icon: Github, href: "https://github.com/Abdullah0928" },
+                    { icon: Linkedin, href: "https://www.linkedin.com/in/m-n-abdullah/" },
+                    { icon: Facebook, href: "https://www.facebook.com/mnabdullah0928/" },
+                    { icon: Instagram, href: "https://www.instagram.com/a_b_de0210/" },
+                    { icon: Mail, href: "mailto:mnabdullah0928@gmail.com" },
+                ].map((item, index) => (
+                    <motion.a 
+                        key={index}
+                        href={item.href}
+                        whileHover={{ scale: 1.2, rotate: 5 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="hover:text-gold-400 transition-colors"
+                    >
+                        <item.icon size={24} />
+                    </motion.a>
+                ))}
+                <motion.button
+                    onClick={handleLike}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center gap-2 hover:text-gold-400 transition-colors"
+                >
+                    <Heart
+                        size={24}
+                        className={`transition-colors ${likes > 0 ? 'fill-gold-500 text-gold-500' : ''}`}
+                    />
+                    <span>{likes}</span>
+                </motion.button>
+            </motion.div>
+
+            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
+    <motion.a
+        href="/path-to-your-cv.pdf"
+        download
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-gradient-to-r from-gold-600 to-gold-500 text-black font-medium py-1 px-2 text-xs md:py-2 md:px-4 rounded transition-colors hover:from-gold-700 hover:to-gold-600 text-center"
+    >
+        Download CV
+    </motion.a>
+
+    <motion.a
+        href="https://wa.me/94754999700" // Replace with your WhatsApp number
+        target="_blank" // Opens the link in a new tab
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-gradient-to-r from-gold-600 to-gold-500 text-black font-medium py-1 px-2 text-xs md:py-2 md:px-4 rounded transition-colors hover:from-gold-700 hover:to-gold-600 text-center"
+    >
+        Hire Me
+    </motion.a>
 </div>
 
-  </div>
-    </div>
 
-    {/* Image Section */}
-    <motion.img
-  initial={{ scale: 0 }}
-  animate={{ scale: 1 }}
-  transition={{ type: "spring", stiffness: 260, damping: 20 }}
-  src={Abd}
-  alt="M.N Abdullah"
-  className="w-48 h-48 sm:w-56 sm:h-56 md:w-96 md:h-96 rounded-full mb-8 md:mb-0 border-4 border-gold-500 shadow-lg"
-/>
-  </motion.div>   
-   </section>
+            </div>
+        </div>
+    </motion.div>   
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 bg-zinc-900/50 backdrop-blur-sm">
