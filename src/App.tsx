@@ -110,7 +110,7 @@ function App() {
             <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col md:flex-row gap-4">
     <motion.a
-        href="/path-to-your-cv.pdf"
+        href="resume/Abdullah.pdf"
         download
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
