@@ -110,7 +110,7 @@ function App() {
             <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col md:flex-row gap-4">
     <motion.a
-        href="resume/Abdullah.pdf"
+        href="resume/Abdullah_cv.pdf"
         download
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -190,7 +190,7 @@ function App() {
                   techStack={['React.js', 'Node.js', 'MongoDB', 'Express']}
                   image={AutoCare}
                   demoLink="#"
-                  githubLink="https://github.com/armahah23/project_Gems"
+                  githubLink="https://github.com/Abdullah0928/project_Gems"
                 />
                 <ProjectCard
                   title="Cafeshila-Web-Application"
